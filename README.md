@@ -4,13 +4,15 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/flatlogic/react-native-starter.git
+git clone https://github.com/prisharp/mfms.git
 
 # Navigate to clonned folder and Install dependencies
-cd react-native-starter && yarn install
+cd react-native-starter
+yarn install
 
 # Install Pods
-cd ios && pod install
+cd ios
+pod install
 ```
 
 #### 2. Open RNS in your iOS simulator
