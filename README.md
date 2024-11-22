@@ -20,3 +20,5 @@ pod install
 Run this command to start the development server and to start your app on iOS simulator:
 ```
 yarn run:ios
+```
+If this code doesn't work, make sure platform of iPhone is installed in XCode for simulator. 
