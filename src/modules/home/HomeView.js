@@ -29,13 +29,13 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
         resizeMode="cover"
       >
         <View style={styles.section}>
-          <Text size={20} white>
-            Home
+          <Text size={20} black>
+            WELCOME TO MFMS 2025
           </Text>
         </View>
         <View style={styles.section}>
           <Text color="#19e7f7" size={15}>
-            The smartest Way to build your mobile app
+            CURRENTLY
           </Text>
           <Text size={30} bold white style={styles.title}>
             React Native Starter
