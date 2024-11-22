@@ -1,18 +1,20 @@
-MFMS Mobile App
+# MFMS MOBILE APP
 
-# Getting Started
+#### 1. Clone and Install
 
-### 1. Clone and Install
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/flatlogic/react-native-starter.git
 
-# Navigate to cloned folder and install dependencies
-cd your-repository && yarn install
+# Navigate to clonned folder and Install dependencies
+cd react-native-starter && yarn install
 
-# Install Pods (for iOS)
+# Install Pods
 cd ios && pod install
+```
 
-### 2. Run IOS
-```bash
+#### 2. Open RNS in your iOS simulator
+
+Run this command to start the development server and to start your app on iOS simulator:
+```
 yarn run:ios
