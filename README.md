@@ -13,3 +13,6 @@ cd your-repository && yarn install
 # Install Pods (for iOS)
 cd ios && pod install
 
+### 2. Run IOS Simulator
+```bash
+yarn run:ios
