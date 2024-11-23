@@ -21,4 +21,5 @@ Run this command to start the development server and to start your app on iOS si
 yarn run:ios
 ```
 If this code doesn't work, make sure platform of iPhone is installed in XCode for simulator. 
-open xcode --> command + "," --> platforms --> iOS 17.2
+
+open xcode --> command + "," --> platforms --> get iOS 17.2
