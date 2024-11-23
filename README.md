@@ -4,10 +4,9 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/prisharp/mfms.git
+git clone https://github.com/prisharpatel/mfms.git
 
 # Navigate to clonned folder and Install dependencies
-cd react-native-starter
 yarn install
 
 # Install Pods
