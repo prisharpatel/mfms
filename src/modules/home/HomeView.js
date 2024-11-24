@@ -29,12 +29,12 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
         resizeMode="cover"
       >
         <View style={styles.section}>
-          <Text size={20} black>
+          <Text size={30} black style={styles.customFont}>
             WELCOME TO MFMS 2025
           </Text>
         </View>
         <View style={styles.section}>
-          <Text color="#19e7f7" size={15}>
+          <Text black size={15}>
             CURRENTLY
           </Text>
           <Text size={30} bold white style={styles.title}>
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     justifyContent: 'center',
     alignItems: 'center',
+    fontFamily: fonts.primaryBoldItalic,
   },
   sectionLarge: {
     flex: 2,
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
   titleDescription: {
     color: '#19e7f7',
     textAlign: 'center',
-    fontFamily: fonts.primaryRegular,
+    fontFamily: fonts.primaryBold,
     fontSize: 15,
   },
   title: {
@@ -117,5 +118,8 @@ const styles = StyleSheet.create({
   priceLink: {
     borderBottomWidth: 1,
     borderBottomColor: colors.primary,
+  },
+  customFont: {
+    fontFamily: "Times New Roman",
   },
 });

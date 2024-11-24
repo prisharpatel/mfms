@@ -34,19 +34,24 @@ const headerLeftComponent = (props) => {
   )
 }
 
-const headerBackground = require('../../../assets/images/topBarBg.png');
+const headerBackground = require('../../../assets/images/background.png');
 
 const StackNavigationData = [
   {
-    name: 'React Native Starter',
+    name: 'MFMS',
     component: TabNavigator,
     headerLeft: null,
     headerBackground: { source: headerBackground },
-    headerTitleStyle: {
-      fontFamily: fonts.primaryRegular,
-      color: colors.white,
-      fontSize: 18,
-    },
+    headerTitle: () => (
+      <Image
+        source={require('../../../assets/images/primary_black.png')} // Path to your image
+        style={{
+          height: 300, // Adjust height
+          width: 100, // Adjust width
+          resizeMode: 'contain',
+        }}
+      />
+    ),
   },
   {
     name: 'Charts',

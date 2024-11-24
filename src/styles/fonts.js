@@ -1,6 +1,9 @@
 export default {
-  primaryLight: 'Lato-Light',
-  primaryRegular: 'Lato-Regular',
-  primaryBold: 'Lato-Bold',
-  primarySemiBold: 'Lato-SemiBold',
+  primaryRegular: "NeueHaasDisplayRoman",
+  primaryRegularItalic: "NeueHaasDisplayRomanItalic",
+  primaryLight: "NeueHaasDisplayLight", 
+  primarySemiBold: "NeueHaasDisplayMediu",
+  primarySemiBoldItalic: "NeueHaasDisplayMediumItalic",
+  primaryBold: "NeueHaasDisplayBlack",
+  primaryBoldItalic: "NeueHaasDisplayBlackItalic",
 };
