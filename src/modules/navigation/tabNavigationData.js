@@ -4,17 +4,17 @@ import GridsScreen from '../grids/GridsViewContainer';
 import PagesScreen from '../pages/PagesViewContainer';
 import ComponentsScreen from '../components/ComponentsViewContainer';
 
-const iconHome = require('../../../assets/images/tabbar/home.png');
-const iconCalendar = require('../../../assets/images/tabbar/calendar.png');
-const iconGrids = require('../../../assets/images/tabbar/grids.png');
-const iconPages = require('../../../assets/images/tabbar/pages.png');
-const iconComponents = require('../../../assets/images/tabbar/components.png');
+const iconHome = require('../../../assets/images/home.png');
+const iconMFMS = require('../../../assets/images/transparent_black.png');
+const iconCalendar = require('../../../assets/images/calendar.png');
+const iconTickets = require('../../../assets/images/tickets.png');
+const iconSpeakers = require('../../../assets/images/speaker.png');
 
 const tabNavigationData = [
   {
-    name: 'Home',
+    name: 'MFMS',
     component: HomeScreen,
-    icon: iconHome,
+    icon: iconMFMS,
   },
   {
     name: 'Calendar',
@@ -22,19 +22,19 @@ const tabNavigationData = [
     icon: iconCalendar,
   },
   {
-    name: 'Grids',
-    component: GridsScreen,
-    icon: iconGrids,
+    name: 'Home',
+    component: HomeScreen,
+    icon: iconHome,
   },
   {
-    name: 'Pages',
+    name: 'Speakers',
     component: PagesScreen,
-    icon: iconPages,
+    icon: iconSpeakers,
   },
   {
-    name: 'Components',
+    name: 'Tickets',
     component: ComponentsScreen,
-    icon: iconComponents,
+    icon: iconTickets,
   },
 ];
 
