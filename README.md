@@ -26,6 +26,5 @@ open xcode --> command + "," --> platforms --> get iOS 17.2
 
 for newer iphone simulator, use
 ```
-cd ..
-react-native run-ios --simulator="iPhone 15"
+yarn run:ios --simulator="iPhone 15"
 ```
