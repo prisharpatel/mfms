@@ -9,7 +9,7 @@ const Tab = createBottomTabNavigator();
 
 export default function BottomTabs() {
   return (
-    <Tab.Navigator tabBarOptions={{style: {height: Platform.OS === 'ios' ? 90 : 50}}}>
+    <Tab.Navigator tabBarOptions={{style: {height: Platform.OS === 'ios' ? 90 : 50, backgroundColor:colors.white}}}>
       {tabNavigationData.map((item, idx) => (
         <Tab.Screen 
           key={`tab_item${idx+1}`}
@@ -40,11 +40,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: colors.white,
     paddingHorizontal: 10,
+    backgroundColor: colors.white,
     bottom: Platform.OS === 'ios' ? -5 : 0,
   },
   tabBarIcon: {
     width: 30,
-    height: 30,
+    height: 35,
   },
   tabBarIconFocused: {
     tintColor: colors.blue,
