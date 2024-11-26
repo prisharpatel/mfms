@@ -23,3 +23,8 @@ yarn run:ios
 If this code doesn't work, make sure platform of iPhone is installed in XCode for simulator. 
 
 open xcode --> command + "," --> platforms --> get iOS 17.2
+
+for newer iphone simulator, use
+```
+yarn run:ios
+```
