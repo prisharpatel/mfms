@@ -15,7 +15,7 @@ const iconResumeDrop = require('../../../assets/images/resume.png');
 const iconPartners = require('../../../assets/images/handshake.png');
 const iconFFS = require('../../../assets/images/ffs_icon.png');
 const iconFAQ = require('../../../assets/images/faq.png');
-const logoImage = require('../../../assets/images/navbarlogo.png')
+const logoImage = require('../../../assets/images/secondary_white.png')
 
 const drawerData = [
   {
@@ -112,12 +112,13 @@ const styles = StyleSheet.create({
   imageContainer: {
     backgroundColor: colors.black,
     alignItems: 'center',
-    paddingBottom: 18,
+    justifyContent: 'center',
+    paddingBottom: 16
   },
   drawerImage: {
-    width: 200, 
-    height: 150, 
-    resizeMode: 'cover'
+    width: "100%",
+    height: 200,
+    resizeMode: 'contain',
   },
 });
 
