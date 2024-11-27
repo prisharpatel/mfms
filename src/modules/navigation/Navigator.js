@@ -8,14 +8,14 @@ import {
 import NavigatorView from './RootNavigation';
 
 import AvailableInFullVersion from '../../modules/availableInFullVersion/AvailableInFullVersionViewContainer';
-
-const iconHome = require('../../../assets/images/drawer/home.png');
-const iconCalendar = require('../../../assets/images/drawer/calendar.png');
-const iconGrids = require('../../../assets/images/drawer/grids.png');
-const iconPages = require('../../../assets/images/drawer/pages.png');
-const iconComponents = require('../../../assets/images/drawer/components.png');
-const iconSettings = require('../../../assets/images/drawer/settings.png');
-const iconBlog = require('../../../assets/images/drawer/blog.png')
+import { colors } from '../../styles';
+const iconHome = require('../../../assets/images/home.png');
+const iconTicket = require('../../../assets/images/tickets.png');
+const iconResumeDrop = require('../../../assets/images/resume.png');
+const iconPartners = require('../../../assets/images/handshake.png');
+const iconFFS = require('../../../assets/images/ffs_icon.png');
+const iconFAQ = require('../../../assets/images/faq.png');
+const logoImage = require('../../../assets/images/navbarlogo.png')
 
 const drawerData = [
   {
@@ -23,91 +23,68 @@ const drawerData = [
     icon: iconHome,
   },
   {
-    name: 'Calendar',
-    icon: iconCalendar,
+    name: 'Buy Your Ticket',
+    icon: iconTicket,
   },
   {
-    name: 'Grids',
-    icon: iconGrids,
+    name: 'Resume Drop',
+    icon: iconResumeDrop,
   },
   {
-    name: 'Pages',
-    icon: iconPages,
+    name: 'FAQ',
+    icon: iconFAQ,
   },
   {
-    name: 'Components',
-    icon: iconComponents,
+    name: 'Partners',
+    icon: iconPartners,
   },
+  {
+    name: 'Fashion Forward Showcase',
+    icon: iconFFS,
+  }
 ];
 
 const Drawer = createDrawerNavigator();
 
 function CustomDrawerContent(props) {
   return (
-    <DrawerContentScrollView {...props} style={{padding: 0}}>
-      <View style={styles.avatarContainer}>
-        <Image
-          style={styles.avatar}
-          source={require('../../../assets/images/drawer/user.png')}
-        />
-        <View style={{ paddingLeft: 15 }}>
-          <Text style={styles.userName}>John Doe</Text>
-          <Text style={{ color: '#4BC1FD' }}>Johndoe@gmail.com</Text>
-        </View>
+
+    
+    <DrawerContentScrollView {...props} style={{ padding: 0 }}>
+      <View style={styles.imageContainer}>
+        <Image style={styles.drawerImage} source={logoImage} />
       </View>
-      <View style={styles.divider} />
       {drawerData.map((item, idx) => (
-        <DrawerItem
-          key={`drawer_item-${idx+1}`}
+        <><DrawerItem
+          key={`drawer_item-${idx + 1}`}
           label={() => (
             <View
               style={styles.menuLabelFlex}>
               <Image
-                style={{ width: 20, height: 20}}
+                style={{ width: 25, height: 25, resizeMode: 'contain' }}
                 source={item.icon}
               />
               <Text style={styles.menuTitle}>{item.name}</Text>
             </View>
           )}
-          onPress={() => props.navigation.navigate(item.name)}
-        />
+          onPress={() => props.navigation.navigate(item.name)} 
+          activeBackgroundColor={colors.blue} 
+          activeTintColor={colors.white}
+          />
+          {idx < drawerData.length - 1 && <View style={styles.divider} />}
+         </>
       ))}
-      <View style={styles.divider} />
-      <DrawerItem
-        label={() => (
-          <View style={styles.menuLabelFlex}>
-            <Image
-              style={{ width: 20, height: 20}}
-              source={iconBlog}
-            />
-            <Text style={styles.menuTitle}>Blog</Text>
-          </View>
-        )}
-        onPress={() => props.navigation.navigate('Blog')}
-      />
-      <View style={styles.divider} />
-      <DrawerItem
-        label={() => (
-          <View style={styles.menuLabelFlex}>
-            <Image
-              style={{ width: 20, height: 20}}
-              source={iconSettings} 
-            />
-            <Text style={styles.menuTitle}>Settings</Text>
-          </View>
-        )}
-        onPress={() => props.navigation.navigate('Calendar')}
-      />
-    </DrawerContentScrollView>
+      </DrawerContentScrollView>
   );
 }
 
 export default function App() {
 
   return (
+
     <Drawer.Navigator
       drawerStyle={{
-        backgroundColor: '#3C38B1',
+        backgroundColor: colors.white,
       }}
       drawerContent={props => <CustomDrawerContent {...props} />}
     >
@@ -119,33 +96,29 @@ export default function App() {
 const styles = StyleSheet.create({
   menuTitle: {
     marginLeft: 10,
-    color: '#fff'
+    color: colors.black,
   },
   menuLabelFlex: {
+    color: colors.black,
     display: 'flex',
+    alignItems: 'center',
     flexDirection: 'row'
   },
-  userName: {
-    color: '#fff',
-    fontSize: 18
-  },
   divider: {
-    borderBottomColor: 'white',
+    borderBottomColor: colors.black,
     opacity: 0.2,
     borderBottomWidth: 1,
-    margin: 15,
   },
-  avatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-  },
-  avatarContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
+  imageContainer: {
+    backgroundColor: colors.black,
     alignItems: 'center',
-    margin: 20,
-    marginBottom: 10
+    paddingBottom: 18,
+  },
+  drawerImage: {
+    width: 200, 
+    height: 150, 
+    resizeMode: 'cover'
   },
 });
+
+

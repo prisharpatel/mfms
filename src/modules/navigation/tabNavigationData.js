@@ -8,7 +8,7 @@ const iconHome = require('../../../assets/images/home.png');
 const iconMFMS = require('../../../assets/images/transparent_black.png');
 const iconCalendar = require('../../../assets/images/calendar.png');
 const iconTickets = require('../../../assets/images/tickets.png');
-const iconSpeakers = require('../../../assets/images/speaker.png');
+const iconSpeakers = require('../../../assets/images/speakers.png');
 
 const tabNavigationData = [
   {
