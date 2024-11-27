@@ -71,6 +71,7 @@ function CustomDrawerContent(props) {
           activeBackgroundColor={colors.blue} 
           activeTintColor={colors.white}
           />
+          {idx < drawerData.length - 1 && <View style={styles.divider} />}
          </>
       ))}
       </DrawerContentScrollView>
@@ -95,28 +96,28 @@ export default function App() {
 const styles = StyleSheet.create({
   menuTitle: {
     marginLeft: 10,
-    color: colors.black
+    color: colors.black,
   },
   menuLabelFlex: {
     color: colors.black,
     display: 'flex',
+    alignItems: 'center',
     flexDirection: 'row'
   },
   divider: {
     borderBottomColor: colors.black,
     opacity: 0.2,
     borderBottomWidth: 1,
-    margin: 15,
   },
   imageContainer: {
-    justifyContent: 'center',
     backgroundColor: colors.black,
     alignItems: 'center',
+    paddingBottom: 18,
   },
   drawerImage: {
-    width: 400, 
-    height: 200, 
-    resizeMode: 'contain'
+    width: 200, 
+    height: 150, 
+    resizeMode: 'cover'
   },
 });
 

@@ -44,10 +44,10 @@ const StackNavigationData = [
     headerBackground: { source: headerBackground },
     headerTitle: () => (
       <Image
-        source={require('../../../assets/images/primary_black.png')} // Path to your image
+        source={require('../../../assets/images/primary_black.png')} 
         style={{
-          height: 300, // Adjust height
-          width: 100, // Adjust width
+          height: 300, 
+          width: 100, 
           resizeMode: 'contain',
         }}
       />
