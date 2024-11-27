@@ -5,9 +5,12 @@ import {
   DrawerItem,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-import NavigatorView from './RootNavigation';
 
-import AvailableInFullVersion from '../../modules/availableInFullVersion/AvailableInFullVersionViewContainer';
+
+import NavigatorView from './RootNavigation';
+import PartnersScreen from '../partners/PartnerViewContainer'
+import TicketsScreen from '../tickets/TicketViewContainer'
+import ResumeDropScreen from '../resumeDrop/ResumeDropContainer'
 import { colors } from '../../styles';
 const iconHome = require('../../../assets/images/home.png');
 const iconTicket = require('../../../assets/images/tickets.png');
@@ -21,27 +24,33 @@ const drawerData = [
   {
     name: 'Home',
     icon: iconHome,
+    component: NavigatorView,
   },
   {
     name: 'Buy Your Ticket',
     icon: iconTicket,
+    component: TicketsScreen,
   },
   {
     name: 'Resume Drop',
     icon: iconResumeDrop,
+    component: ResumeDropScreen,
   },
   {
     name: 'FAQ',
     icon: iconFAQ,
+    component: FAQScreen,
   },
   {
     name: 'Partners',
     icon: iconPartners,
+    component: PartnersScreen
   },
   {
     name: 'Fashion Forward Showcase',
     icon: iconFFS,
-  }
+    component: FFSScreen
+  },
 ];
 
 const Drawer = createDrawerNavigator();
